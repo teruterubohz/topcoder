@@ -45,7 +45,7 @@ public class PowerOutage {
 		Console.Error.WriteLine();
 
     	int nCases = 0, nPassed = 0;
-    	using (var reader = File.OpenText("PowerOutage.sample")) {
+    	using (var reader = File.OpenText("..\\..\\..\\..\\SRM144\\PowerOutage.sample")) {
             while (true) {
                 string line = reader.ReadLine();
                 if (line == null || !line.StartsWith("--"))
@@ -77,7 +77,7 @@ public class PowerOutage {
 		Console.Error.WriteLine(string.Format("Passed : {0}/{1} cases", nPassed, nCases));
 
 		DateTime Jan1st1970 = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-		int T = (int)((DateTime.UtcNow - Jan1st1970).TotalSeconds - 1455633777);
+		int T = (int)((DateTime.UtcNow - Jan1st1970).TotalSeconds - 1455864129);
 		double PT = T / 60.0, TT = 75.0;
 		Console.Error.WriteLine(string.Format("Time   : {0} minutes {1} secs", T / 60, T % 60));
 		Console.Error.WriteLine(string.Format("Score  : {0:0.00} points", 1100 * (0.3 + (0.7 * TT * TT) / (10.0 * PT * PT + TT * TT))));

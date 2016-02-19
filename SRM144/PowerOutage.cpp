@@ -20,7 +20,7 @@ class PowerOutage {
 };
 
 // CUT begin
-ifstream data("../../SRM 144/PowerOutage.sample");
+ifstream data("..\\..\\SRM144\\PowerOutage.sample");
 
 string next_line() {
     string s;
@@ -104,7 +104,7 @@ int run_test(bool mainProcess, const set<int> &case_set, const string command) {
     }
     if (mainProcess) {
         cout << endl << "Passed : " << passed << "/" << cases << " cases" << endl;
-        int T = time(NULL) - 1455633325;
+        int T = time(NULL) - 1455864115;
         double PT = T / 60.0, TT = 75.0;
         cout << "Time   : " << T / 60 << " minutes " << T % 60 << " secs" << endl;
         cout << "Score  : " << 1100 * (0.3 + (0.7 * TT * TT) / (10.0 * PT * PT + TT * TT)) << " points" << endl;
