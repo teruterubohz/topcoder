@@ -9,14 +9,63 @@
 #include <sstream>
 #include <typeinfo>
 #include <fstream>
+#include <numeric>
 
 using namespace std;
 
+const static int MAX_ELEMENT = 50;
+const static int INFTY = 9999999;
+
 class PowerOutage {
-    public:
-    int estimateTimeOut(vector<int> fromJunction, vector<int> toJunction, vector<int> ductLength) {
-        return 0;
+	public:
+	int estimateTimeOut(vector<int> fromJunction, vector<int> toJunction, vector<int> ductLength) {
+		vector<vector<int> > J(MAX_ELEMENT, vector<int>(MAX_ELEMENT, INFTY));
+		int elements = fromJunction.size();
+		for (int i = 0; i < elements; i++)
+		{
+			J[fromJunction[i]][toJunction[i]] = J[toJunction[i]][fromJunction[i]] = ductLength[i];
+		}
+
+		int farthestDis = dijkstra(J);
+		int total = accumulate(ductLength.begin(), ductLength.end(), 0);
+		int minMinutes = 2 * total - farthestDis;
+        return minMinutes;
     }
+
+	private:
+	int dijkstra(const vector<vector<int> >& J){
+		vector<int> D(MAX_ELEMENT);
+		for (int i = 1; i < MAX_ELEMENT; i++)
+		{
+			D[i] = J[0][i];
+		}
+
+		vector<bool> visited(MAX_ELEMENT, false);
+		while (true){
+			int minDis = INFTY;
+			int minIdx = -1;
+			for (int j = 1; j < MAX_ELEMENT; j++){
+				if (!visited[j] && D[j] < minDis){
+					minDis = D[j];
+					minIdx = j;
+				}
+			}
+			if (minIdx == -1)
+				break;
+			visited[minIdx] = true;
+
+			for (int j = 1; j < MAX_ELEMENT; j++){
+				D[j] = min(D[j], minDis + J[minIdx][j]);
+			}
+		}
+
+		int maxDis = 0;
+		for (int i = 0; i < MAX_ELEMENT; i++){
+			if (D[i] != INFTY && D[i] > maxDis)
+				maxDis = D[i];
+		}
+		return maxDis;
+	}
 };
 
 // CUT begin

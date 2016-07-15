@@ -3,6 +3,8 @@ using System.IO;
 using System.Collections.Generic;
 using System.Text;
 
+
+
 public class PowerOutage {
 	public int estimateTimeOut(int[] fromJunction, int[] toJunction, int[] ductLength) {
 		return 0;
