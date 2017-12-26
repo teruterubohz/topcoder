@@ -1,0 +1,6 @@
+D:\010_Study\020_topcoder\SRMpython\SRMpython.sln を起動
+対象ファイルを追加
+スタートアップファイルとして指定
+
+*.sampleをD:\010_Study\020_topcoder\SRMpython\SRMpythonにおく
+

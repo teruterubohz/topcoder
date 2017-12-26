@@ -1,0 +1,1 @@
+*.sample ファイルはここにおく。D:\010_Study\020_topcoder\SRMsharp\SRMsharp\bin\Debug

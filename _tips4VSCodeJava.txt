@@ -1,0 +1,10 @@
+***.sampleをCode.exeと同じディレクトリに置く。
+D:\010_Study\020_topcoder\MicrosoftVSCode
+
+
+1.D:\010_Study\020_topcoder\MicrosoftVSCode\Code.exe から vscode を開く。
+2.フォルダを開く-対象ファイルが存在するフォルダを選択
+3.ファイル-ファイルを開く-対象ファイルを開く
+4.ctrl + shift + D
+5.workspaceの下にある*.javaをvscodeで開き、車輪からlaunch.jsonを追加。デバッグの構成をattach-binarycode
+6.デバッグ開始
