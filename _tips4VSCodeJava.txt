@@ -6,5 +6,6 @@ D:\010_Study\020_topcoder\MicrosoftVSCode
 2.フォルダを開く-対象ファイルが存在するフォルダを選択
 3.ファイル-ファイルを開く-対象ファイルを開く
 4.ctrl + shift + D
-5.workspaceの下にある*.javaをvscodeで開き、車輪からlaunch.jsonを追加。デバッグの構成をattach-binarycode
-6.デバッグ開始
+5.ここでもう一度workspaceの下にある*.javaをvscodeで開く
+6.車輪からlaunch.jsonを追加。デバッグの構成をattach-binarycode
+7.デバッグ開始
