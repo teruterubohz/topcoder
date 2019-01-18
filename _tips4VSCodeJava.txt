@@ -2,10 +2,37 @@
 D:\010_Study\020_topcoder\MicrosoftVSCode
 
 
+環境構築方法
+1. visual studio code をインストール
+   拡張機能(Ctrl+Shift+X)ビューを開く
+   Java Extension Packをインストール(Debugger for Java, Laguage Support for Javaもインストールされる) 
+2．JDK インストールし、JAVA_HOMEに設定
+3. visual studio code で設定画面(Ctrl+,)を開き、java.homeを自分の環境に合わせて設定しておく。
+4. VScode 右下からエディタ対象を「Java」にする
+
+
+
+
+
+
+
+
+
+
+
 1.D:\010_Study\020_topcoder\MicrosoftVSCode\Code.exe から vscode を開く。
-2.フォルダを開く-対象ファイルが存在するフォルダを選択
+2.[File]-[Forder]フォルダを開く-対象ファイルが存在するフォルダを選択
 3.ファイル-ファイルを開く-対象ファイルを開く
 4.ctrl + shift + D
 5.ここでもう一度workspaceの下にある*.javaをvscodeで開く
+
+[Java Extension Pach] をインストール
+左の”虫”マークからlaunch.json を追加
+
 6.車輪からlaunch.jsonを追加。デバッグの構成をattach-binarycode
 7.デバッグ開始
+
+
+
+
+
